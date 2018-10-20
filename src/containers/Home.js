@@ -12,6 +12,7 @@ export default class Home extends Component {
                     <LinkContainer to="/assessment">
                         <button type="button" className="btn btn-success">Success</button>
                     </LinkContainer>
+                    <img src="https://i1.wp.com/bestselfpropelledlawnmowers.com/wp-content/uploads/2017/06/how-to-plant-grass-seed-on-dirt.jpg?resize=275%2C183" alt="Flowers in Chania"/>
                 </div>
             </div>
         );
