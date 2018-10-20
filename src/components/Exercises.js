@@ -28,7 +28,7 @@ export default class Exercises extends Component {
             <div className="Exercises">
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" ||this.props.mood === "depressed"
-        ||this.props.mood === "anxious") ?
+        ||this.props.mood === "anxious" || this.props.mood === "happy" ||this.props.mood === "stressed" ||this.props.mood === "alright") ?
                     <Panel className="col-lg-4">
                         <Panel.Heading>
                             <Panel.Title componentClass="h3">Dance</Panel.Title>
@@ -94,7 +94,7 @@ export default class Exercises extends Component {
 
         {
             (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" ||this.props.mood === "depressed"
-                ||this.props.mood === "anxious") ?
+                ||this.props.mood === "anxious" ||this.props.mood === "stressed") ?
         <Panel className="col-lg-4">
             <Panel.Heading>
             <Panel.Title componentClass="h3">Meditation</Panel.Title>
@@ -105,6 +105,92 @@ export default class Exercises extends Component {
         <Panel.Collapse>
         <Modal.Dialog>
         <Modal.Body>Meditation is a practice where an individual uses a technique, such as focusing their mind on a particular object, thought or activity, to achieve a mentally clear and emotionally calm state.</Modal.Body>
+        <Modal.Footer>
+        <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+        </Modal.Footer>
+        </Modal.Dialog>
+        </Panel.Collapse>
+        </Panel>
+        : null
+        }
+        {
+            (this.state.showAll) || (!this.state.hideAll && this.props.mood === "alright") ?
+        <Panel className="col-lg-4">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">Walk</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>Go outside and move</Panel.Body>
+        <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+            {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+        <Panel.Collapse>
+        <Modal.Dialog>
+        <Modal.Body>Walking is one of the main gaits of locomotion among legged animals. </Modal.Body>
+        <Modal.Footer>
+        <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+        </Modal.Footer>
+        </Modal.Dialog>
+        </Panel.Collapse>
+        </Panel>
+        : null
+        }
+
+        {
+            (this.state.showAll) || (!this.state.hideAll && this.props.mood === "safe") ?
+        <Panel className="col-lg-4">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">Socialize</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>Call your best friend</Panel.Body>
+        <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+            {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+        <Panel.Collapse>
+        <Modal.Dialog>
+        <Modal.Body>Communication is the act of conveying meanings from one entity or group to another through the use of mutually understood signs and semiotic rules.  </Modal.Body>
+        <Modal.Footer>
+        <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+        </Modal.Footer>
+        </Modal.Dialog>
+        </Panel.Collapse>
+        </Panel>
+        : null
+        }
+        {
+            (this.state.showAll) || (!this.state.hideAll && this.props.mood === "unsafe") ?
+        <Panel className="col-lg-4">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">Get Help</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>Dial hotline # 440-260-8595</Panel.Body>
+        <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+            {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+        <Panel.Collapse>
+        <Modal.Dialog>
+        <Modal.Body>Other resousrces: Dial 911.</Modal.Body>
+        <Modal.Footer>
+        <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+        </Modal.Footer>
+        </Modal.Dialog>
+        </Panel.Collapse>
+        </Panel>
+        : null
+        }
+        {
+            (this.state.showAll) || (!this.state.hideAll && this.props.mood === "safe") ?
+        <Panel className="col-lg-4">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">Give a Compliment</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>Talk about their clothes or hair</Panel.Body>
+        <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+            {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+        <Panel.Collapse>
+        <Modal.Dialog>
+        <Modal.Body>
+        a polite expression of praise or admiration.</Modal.Body>
         <Modal.Footer>
         <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
             <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
