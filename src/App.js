@@ -13,7 +13,8 @@ class App extends Component {
             isAuthenticated: false,
             mood: " ",
             // completed: false,
-            size: 0
+            size: 0,
+            showAlert: false
         };
     }
 
@@ -23,6 +24,10 @@ class App extends Component {
 
     setMood = mood => {
         this.setState({mood: mood});
+    };
+
+    setAlert = alert => {
+        this.setState({showAlert: alert});
     };
 
     // setCompleted = completed => {
@@ -49,7 +54,8 @@ class App extends Component {
             // completed: this.state.completed,
             mood: this.state.mood,
             size: this.state.size,
-            setSize: this.setSize
+            setSize: this.setSize,
+            setAlert: this.setAlert
         };
 
         return (
@@ -80,7 +86,7 @@ class App extends Component {
                     </Navbar.Collapse>
                 </Navbar>
                 {
-                    (this.state.size !== 0) ?
+                    (this.state.showAlert) ?
                         <Alert bsStyle="success">
                             <strong>CONGRATS! Your Plant Grew</strong>
                         </Alert>

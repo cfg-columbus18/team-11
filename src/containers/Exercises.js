@@ -26,6 +26,7 @@ export default class Exercises extends Component {
     }
 
     handleFeedback() {
+        this.props.setAlert(true);
         this.props.history.push("/");
     }
 

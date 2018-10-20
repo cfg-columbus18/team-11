@@ -53,7 +53,7 @@ export default class Home extends Component {
 
                     <div id={"goToExercise"}>
                         <LinkContainer to="/assessment">
-                            <button type="button" className="btn btn-success">Go to my excercises</button>
+                            <button type="button" className="btn btn-success" onClick={() => {this.props.setAlert(false);}}>Go to my excercises</button>
                         </LinkContainer>
                     </div>
                 </div>
