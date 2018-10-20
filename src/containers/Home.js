@@ -8,7 +8,7 @@ export default class Home extends Component {
                 <div className="lander">
                     <h1>Code4Good</h1>
                     <p>Our project</p>
-
+                    <img src="https://i1.wp.com/bestselfpropelledlawnmowers.com/wp-content/uploads/2017/06/how-to-plant-grass-seed-on-dirt.jpg?resize=275%2C183" alt="Flowers in Chania"/>
                 </div>
             </div>
         );
