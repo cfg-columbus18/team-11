@@ -14,9 +14,37 @@ export default class Home extends Component {
                     <h1>Code4Good</h1>
                     {/*<h3>{this.props.size}</h3>*/}
                     {/*<p>Our project</p>*/}
-                    <div className={"plant"}>
-                        <img src="https://i1.wp.com/bestselfpropelledlawnmowers.com/wp-content/uploads/2017/06/how-to-plant-grass-seed-on-dirt.jpg?resize=275%2C183" alt="Flowers in Chania"/>
-                    </div>
+                    {
+                        (this.props.size === 0) ?
+                            <div className={"plant"}><img src="https://image.ibb.co/jidci0/Screen-Shot-2018-10-20-at-9-56-05-AM.png"/></div>
+                            : null
+                    }
+
+                    {
+                        (this.props.size === 1) ?
+                            <div className={"plant"}><img src="https://image.ibb.co/hOaJqf/Screen-Shot-2018-10-20-at-9-56-27-AM.png"/></div>
+                            : null
+                    }
+
+                    {
+                        (this.props.size === 2) ?
+                            <div className={"plant"}><img src="https://image.ibb.co/mDJtO0/Screen-Shot-2018-10-20-at-9-56-36-AM.png"/></div>
+                            : null
+                    }
+
+                    {
+                        (this.props.size === 3) ?
+                            <div className={"plant"}><img src="https://image.ibb.co/hx7WAf/Screen-Shot-2018-10-20-at-9-56-43-AM.png"/></div>
+                            : null
+                    }
+
+                    {
+                        (this.props.size >= 4) ?
+                            <div className={"plant"}><img src="https://image.ibb.co/b3xWAf/Screen-Shot-2018-10-20-at-9-56-50-AM.png"/></div>
+                            : null
+                    }
+
+
 
 
                     <div id={"goToExercise"}>
