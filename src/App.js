@@ -11,7 +11,9 @@ class App extends Component {
 
         this.state = {
             isAuthenticated: false,
-            mood: " "
+            mood: " ",
+            // completed: false,
+            size: 0
         };
     }
 
@@ -21,6 +23,14 @@ class App extends Component {
 
     setMood = mood => {
         this.setState({mood: mood});
+    };
+
+    // setCompleted = completed => {
+    //     this.setState({completed: completed});
+    // };
+
+    setSize = size => {
+        this.setState({size: size});
     };
 
     handleLogout = event => {
@@ -34,8 +44,12 @@ class App extends Component {
         const childProps = {
             isAuthenticated: this.state.isAuthenticated,
             userHasAuthenticated: this.userHasAuthenticated,
+            // setCompleted: this.setCompleted,
             setMood: this.setMood,
-            mood: this.state.mood
+            // completed: this.state.completed,
+            mood: this.state.mood,
+            size: this.state.size,
+            setSize: this.setSize
         };
 
         return (
