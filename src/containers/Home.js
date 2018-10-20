@@ -8,6 +8,7 @@ export default class Home extends Component {
                 <div className="lander">
                     <h1>Code4Good</h1>
                     <p>Our project</p>
+
                 </div>
             </div>
         );
