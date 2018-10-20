@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Alert, Nav, Navbar, NavItem } from "react-bootstrap";
+import { Alert, ButtonToolbar, DropdownButton, MenuItem, Nav, Navbar, NavItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
@@ -61,15 +61,23 @@ class App extends Component {
         return (
             !this.state.isAuthenticating &&
             <div className="App container">
+
                 <Navbar fluid collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <Link to="/">Code4Good</Link>
+                            <Link to="/">GrowU</Link>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
+                        {/*<ButtonToolbar>*/}
+                            {/*<DropdownButton title={"Menu"}>*/}
+                                {/*<MenuItem eventKey="1">Statistics</MenuItem>*/}
+                                {/*<MenuItem eventKey="2">Change Language action</MenuItem>*/}
+                            {/*</DropdownButton>*/}
+                        {/*</ButtonToolbar>*/}
                         <Nav pullRight>
+
                             {this.state.isAuthenticated
                                 ? <NavItem onClick={this.handleLogout}>Logout</NavItem>
                                 : <Fragment>
@@ -78,10 +86,10 @@ class App extends Component {
                                     </LinkContainer>
                                     <LinkContainer to="/login">
                                         <NavItem>Login</NavItem>
-
                                     </LinkContainer>
                                 </Fragment>
                             }
+
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

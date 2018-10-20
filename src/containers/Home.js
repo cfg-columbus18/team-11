@@ -13,7 +13,7 @@ export default class Home extends Component {
             <div className="Home">
                 <div className="lander">
 
-                    <h1>Code4Good</h1>
+                    <h1>GrowU</h1>
                     {/*<h3>{this.props.size}</h3>*/}
                     {/*<p>Our project</p>*/}
 
@@ -53,7 +53,7 @@ export default class Home extends Component {
 
                     <div id={"goToExercise"}>
                         <LinkContainer to="/assessment">
-                            <button type="button" className="btn btn-success" onClick={() => {this.props.setAlert(false);}}>Go to my excercises</button>
+                            <button type="button" className="btn btn-default" onClick={() => {this.props.setAlert(false);}}>Go to my exercises</button>
                         </LinkContainer>
                     </div>
                 </div>
