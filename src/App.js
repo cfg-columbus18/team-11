@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { Alert, Nav, Navbar, NavItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
@@ -13,7 +13,8 @@ class App extends Component {
             isAuthenticated: false,
             mood: " ",
             // completed: false,
-            size: 0
+            size: 0,
+            showAlert: false
         };
     }
 
@@ -23,6 +24,10 @@ class App extends Component {
 
     setMood = mood => {
         this.setState({mood: mood});
+    };
+
+    setAlert = alert => {
+        this.setState({showAlert: alert});
     };
 
     // setCompleted = completed => {
@@ -49,7 +54,8 @@ class App extends Component {
             // completed: this.state.completed,
             mood: this.state.mood,
             size: this.state.size,
-            setSize: this.setSize
+            setSize: this.setSize,
+            setAlert: this.setAlert
         };
 
         return (
@@ -79,6 +85,13 @@ class App extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
+                {
+                    (this.state.showAlert) ?
+                        <Alert bsStyle="success">
+                            <strong>CONGRATS! Your Plant Grew</strong>
+                        </Alert>
+                        : null
+                }
                 <Routes childProps={childProps} />
             </div>
         );
