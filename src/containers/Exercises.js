@@ -36,12 +36,12 @@ export default class Exercises extends Component {
                 <div className="row">
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" || this.props.mood === "depressed"
-                        || this.props.mood === "anxious") ?
+                        || this.props.mood === "anxious" || this.props.mood === "stressed") ?
                         <Panel className="col-lg-5">
                             <Panel.Heading id={"panelhead"}>
                                 <Panel.Title componentClass="h3">Dance</Panel.Title>
                             </Panel.Heading>
-                            <Panel.Body>Move your body</Panel.Body>
+                            <Panel.Body>Move your body to the beat</Panel.Body>
 
                             {/*<Image src="https://classroomclipart.com/images/gallery/Clipart/Dance/TN_enjoying-music-and-dancing-clipart-623.jpg" responsive/>*/}
 
@@ -66,20 +66,17 @@ export default class Exercises extends Component {
                         : null
                 }
                 {
-                    (this.state.showAll) || (!this.state.hideAll && this.props.mood === "happy") ?
+                    (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" ) ?
                         <Panel className="col-lg-4">
                             <Panel.Heading id={"panelhead"}>
                                 <Panel.Title componentClass="h3">Music</Panel.Title>
                             </Panel.Heading>
-                            <Panel.Body>Listen to your favorite song</Panel.Body>
+                            <Panel.Body>Pick calm music</Panel.Body>
                             <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
                                 <Modal.Dialog>
-                                    <Modal.Body>Music is an art form and cultural activity whose medium is sound
-                                        organized in time. In general definitions of music will include common elements
-                                        such as pitch, rhythm, dynamics, and the sonic qualities of timbre and
-                                        texture.</Modal.Body>
+                                    <Modal.Body>Pick music that relaxes that relaxes you such as classical music. For example, Beethoven.</Modal.Body>
                                     <Modal.Footer>
                                         <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
                                         <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
@@ -93,9 +90,9 @@ export default class Exercises extends Component {
                         (this.state.showAll) || (!this.state.hideAll && this.props.mood === "happy") ?
                             <Panel className="col-lg-4">
                                 <Panel.Heading id={"panelhead"}>
-                                    <Panel.Title componentClass="h3">Healthy Eating</Panel.Title>
+                                    <Panel.Title componentClass="h3">Eating</Panel.Title>
                                 </Panel.Heading>
-                                <Panel.Body>Eat fruits or vegetables</Panel.Body>
+                                <Panel.Body>Eat healthy foods. i.e. fruits & veggies</Panel.Body>
                                 <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                                 {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                                 <Panel.Collapse>
@@ -134,12 +131,35 @@ export default class Exercises extends Component {
                     }
 
                     {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "depressed") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">3 Good Things</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Write 3 things you are thankful for</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body> 3 good things</Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
+
+
+                    {
                         (this.state.showAll) || (!this.state.hideAll && this.props.mood === "happy") ?
                             <Panel className="col-lg-4">
                                 <Panel.Heading id={"panelhead"}>
                                     <Panel.Title componentClass="h3">Card Games</Panel.Title>
                                 </Panel.Heading>
-                                <Panel.Body>Uno, War, or Go Fish</Panel.Body>
+                                <Panel.Body>Play Uno, War, or Go Fish</Panel.Body>
                                 <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                                 {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                                 <Panel.Collapse>
@@ -160,18 +180,18 @@ export default class Exercises extends Component {
 
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" || this.props.mood === "depressed"
-                        || this.props.mood === "anxious") ?
+                        || this.props.mood === "anxious" || this.props.mood === "stressed") ?
                         <Panel className="col-lg-4">
                             <Panel.Heading id={"panelhead"}>
                                 <Panel.Title componentClass="h3">Yoga</Panel.Title>
                             </Panel.Heading>
-                            <Panel.Body>Breathe and Pose</Panel.Body>
+                            <Panel.Body>Breathe and Stretch</Panel.Body>
                             <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
                                 <Modal.Dialog>
-                                    <Modal.Body>Yoga is a group of physical, mental, and spiritual practices or
-                                        disciplines which originated in ancient India</Modal.Body>
+                                    <Modal.Body>1. Inhale 2. Exhale 3. Stretch your left leg to the right and reach your right hand to left foot.
+                                    4. Breathe and feel the stretch.</Modal.Body>
                                     <Modal.Footer>
                                         <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
                                         <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
@@ -183,7 +203,7 @@ export default class Exercises extends Component {
                 }
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" || this.props.mood === "depressed"
-                        || this.props.mood === "anxious") ?
+                        || this.props.mood === "anxious" || this.props.mood === "stressed") ?
                         <Panel className="col-lg-4">
                             <Panel.Heading id={"panelhead"}>
                                 <Panel.Title componentClass="h3">Meditation</Panel.Title>
@@ -193,9 +213,11 @@ export default class Exercises extends Component {
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
                                 <Modal.Dialog>
-                                    <Modal.Body>Meditation is a practice where an individual uses a technique, such as
-                                        focusing their mind on a particular object, thought or activity, to achieve a
-                                        mentally clear and emotionally calm state.</Modal.Body>
+                                    <Modal.Body>1. Sit or lie comfortably.
+                                        2.Close your eyes.
+                                        3. Make no effort to control the breath; simply breathe naturally.
+                                        4. Focus your attention on the breath and on how the body moves with each inhalation and exhalation.
+                                    </Modal.Body>
                                     <Modal.Footer>
                                         <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
                                         <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
@@ -209,14 +231,14 @@ export default class Exercises extends Component {
                         (this.state.showAll) || (!this.state.hideAll && this.props.mood === "alright") ?
                             <Panel className="col-lg-4">
                                 <Panel.Heading id={"panelhead"}>
-                                    <Panel.Title componentClass="h3">Walk</Panel.Title>
+                                    <Panel.Title componentClass="h3">Experience Nature</Panel.Title>
                                 </Panel.Heading>
-                                <Panel.Body>Go outside and move</Panel.Body>
+                                <Panel.Body>Go take a walk</Panel.Body>
                                 <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                                 {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                                 <Panel.Collapse>
                                     <Modal.Dialog>
-                                        <Modal.Body>Walking is one of the main gaits of locomotion among legged animals. </Modal.Body>
+                                        <Modal.Body>Go to the woods, go sightseeing. </Modal.Body>
                                         <Modal.Footer>
                                             <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
                                             <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
@@ -274,7 +296,7 @@ export default class Exercises extends Component {
                                 <Panel.Heading id={"panelhead"}>
                                     <Panel.Title componentClass="h3">Give a Compliment</Panel.Title>
                                 </Panel.Heading>
-                                <Panel.Body>Talk about their clothes or hair</Panel.Body>
+                                <Panel.Body>Say something nice</Panel.Body>
                                 <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                                 {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                                 <Panel.Collapse>
