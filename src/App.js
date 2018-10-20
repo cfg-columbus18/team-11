@@ -65,7 +65,7 @@ class App extends Component {
                 <Navbar fluid collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <Link to="/">Code4Good</Link>
+                            <Link to="/">GrowU</Link>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
