@@ -2,3 +2,8 @@
     width: 15rem;
     height: 20rem;
 }
+
+#myRow {
+    display: flex;
+    padding: 5px;
+}

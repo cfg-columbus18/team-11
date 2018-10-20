@@ -27,14 +27,14 @@ export default class Exercises extends Component {
         return (
             <div className="Exercises">
                 {
-                    (this.state.showAll) || (!this.state.hideAll && this.props.mood === "sad" || this.props.mood === "happy") ?
+                    (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry") ?
                     <Panel>
                         <Panel.Heading>
                             <Panel.Title componentClass="h3">Ex 1</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>Panel content</Panel.Body>
                         <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
-                        <Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>
+                        {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                         <Panel.Collapse>
                             <Modal.Dialog>
                                 <Modal.Body>Description of what to do</Modal.Body>
@@ -47,7 +47,7 @@ export default class Exercises extends Component {
                     </Panel>
                         : null
                 }
-                
+
                 <Button bsStyle="info" onClick={this.toggleShowAll}>Show All</Button>
             </div>
         );
