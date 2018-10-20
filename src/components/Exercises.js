@@ -26,7 +26,8 @@ export default class Exercises extends Component {
     render() {
         return (
             <div className="Exercises">
-                {this.state.showAll || (!this.state.hideAll && this.props.mood === "sad" || this.props.mood === "happy") &&
+                {
+                    (this.state.showAll) || (!this.state.hideAll && this.props.mood === "sad" || this.props.mood === "happy") ?
                     <Panel>
                         <Panel.Heading>
                             <Panel.Title componentClass="h3">Ex 1</Panel.Title>
@@ -44,13 +45,9 @@ export default class Exercises extends Component {
                             </Modal.Dialog>
                         </Panel.Collapse>
                     </Panel>
+                        : null
                 }
-
-
-                {/*<div className="panel" onClick={this.handleFinishAssessment("happy")}>*/}
-                    {/**/}
-                    {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
-                {/*</div>*/}
+                
                 <Button bsStyle="info" onClick={this.toggleShowAll}>Show All</Button>
             </div>
         );
