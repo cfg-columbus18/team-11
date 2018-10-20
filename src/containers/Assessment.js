@@ -8,14 +8,13 @@ import {
 export default class Assessment extends Component {
     constructor(props) {
         super(props);
-        this.state = {mood: ""};
         this.handleFinishAssessment = this.handleFinishAssessment.bind(this);
     }
 
     handleFinishAssessment(mood) {
         return ( e => {
             e.preventDefault();
-            this.setState({mood: mood});
+            this.props.setMood(mood);
         });
 
     };
