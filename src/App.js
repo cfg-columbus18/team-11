@@ -37,7 +37,7 @@ class App extends Component {
                 <Navbar fluid collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <Link to="/">Code For Good</Link>
+                            <Link to="/">Code4Good</Link>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
@@ -51,6 +51,7 @@ class App extends Component {
                                     </LinkContainer>
                                     <LinkContainer to="/login">
                                         <NavItem>Login</NavItem>
+
                                     </LinkContainer>
                                 </Fragment>
                             }
