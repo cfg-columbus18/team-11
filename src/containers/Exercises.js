@@ -34,6 +34,7 @@ export default class Exercises extends Component {
         return (
             <div className="Exercises">
                 <div className="row">
+
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" || this.props.mood === "depressed"
                         || this.props.mood === "anxious") ?
