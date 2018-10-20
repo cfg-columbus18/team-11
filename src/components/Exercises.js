@@ -26,19 +26,19 @@ export default class Exercises extends Component {
     render() {
         return (
             <div className="Exercises">
-                {this.state.showAll || !this.state.hideAll && this.props.mood === "sad" || this.props.mood === "happy" &&
+                {this.state.showAll || (!this.state.hideAll && this.props.mood === "sad" || this.props.mood === "happy") &&
                     <Panel>
                         <Panel.Heading>
                             <Panel.Title componentClass="h3">Ex 1</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>Panel content</Panel.Body>
-                        <Panel.Toggle componentClass="a">Test Toggle</Panel.Toggle>
+                        <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
                         <Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>
                         <Panel.Collapse>
                             <Modal.Dialog>
                                 <Modal.Body>Description of what to do</Modal.Body>
                                 <Modal.Footer>
-                                    <Panel.Toggle className="toggle" componentClass="a">Test Toggle</Panel.Toggle>
+                                    <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
                                     <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
                                 </Modal.Footer>
                             </Modal.Dialog>
