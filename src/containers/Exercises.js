@@ -41,7 +41,7 @@ export default class Exercises extends Component {
                                 <Panel.Title componentClass="h3">Dance</Panel.Title>
                             </Panel.Heading>
                             <Panel.Body>Move your body</Panel.Body>
-                            <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+                            <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
                                 <Modal.Dialog>
@@ -65,7 +65,7 @@ export default class Exercises extends Component {
                                 <Panel.Title componentClass="h3">Music</Panel.Title>
                             </Panel.Heading>
                             <Panel.Body>Listen to your favorite song</Panel.Body>
-                            <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+                            <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
                                 <Modal.Dialog>
@@ -90,7 +90,7 @@ export default class Exercises extends Component {
                                 <Panel.Title componentClass="h3">Yoga</Panel.Title>
                             </Panel.Heading>
                             <Panel.Body>Breathe and Pose</Panel.Body>
-                            <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+                            <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
                                 <Modal.Dialog>
@@ -113,7 +113,7 @@ export default class Exercises extends Component {
                                 <Panel.Title componentClass="h3">Meditation</Panel.Title>
                             </Panel.Heading>
                             <Panel.Body>Sit, close your eyes, and breathe</Panel.Body>
-                            <Panel.Toggle componentClass="a">Show Description</Panel.Toggle>
+                            <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
                                 <Modal.Dialog>

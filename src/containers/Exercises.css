@@ -4,7 +4,17 @@
 /*}*/
 
 .toggle {
-    padding-right: 10px;
+    display: inline-block;
+    background: #ffd324;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #FFF;
+    padding: 8px 8px;
+    cursor: pointer;
+}
+
+.toggleContainer {
+    padding-right: 5px;
 }
 
 .feedback {
