@@ -1,7 +1,7 @@
-.panel {
-    width: 30rem;
-    height: 30rem;
-}
+/*.panel {*/
+    /*width: 30rem;*/
+    /*height: 30rem;*/
+/*}*/
 
 .toggle {
     padding-right: 10px;
@@ -10,3 +10,10 @@
 .feedback {
     display: flex;
 }
+
+#panelhead {
+    background-color: #ffffff;
+}
+
+
+

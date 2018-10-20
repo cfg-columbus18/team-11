@@ -4,7 +4,7 @@ import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
 import AppliedRoute from "./components/AppliedRoute";
-import Exercises from "./components/Exercises";
+import Exercises from "./containers/Exercises";
 import Signup from "./containers/Signup";
 import Assessment from "./containers/Assessment";
 
