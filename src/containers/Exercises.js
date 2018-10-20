@@ -36,11 +36,14 @@ export default class Exercises extends Component {
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" || this.props.mood === "depressed"
                         || this.props.mood === "anxious") ?
-                        <Panel className="col-lg-4">
+                        <Panel className="col-lg-5">
                             <Panel.Heading id={"panelhead"}>
                                 <Panel.Title componentClass="h3">Dance</Panel.Title>
                             </Panel.Heading>
                             <Panel.Body>Move your body</Panel.Body>
+
+                            {/*<Image src="https://classroomclipart.com/images/gallery/Clipart/Dance/TN_enjoying-music-and-dancing-clipart-623.jpg" responsive/>*/}
+
                             <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
                             {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
                             <Panel.Collapse>
@@ -53,6 +56,9 @@ export default class Exercises extends Component {
                                         <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
                                         <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
                                     </Modal.Footer>
+
+
+
                                 </Modal.Dialog>
                             </Panel.Collapse>
                         </Panel>
@@ -82,6 +88,75 @@ export default class Exercises extends Component {
                         </Panel>
                         : null
                 }
+                    {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "happy") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">Healthy Eating</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Eat fruits or vegetables</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body>A healthy diet is a diet that helps to maintain or improve overall health.</Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
+
+                    {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "alright") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">Arts & Craft</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Make paper airplanes or origami</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body>A craft or trade is a pastime or a profession that requires some creativity. </Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
+
+                    {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "happy") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">Card Games</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Uno, War, or Go Fish</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body>A card game is any game using playing cards as the primary device with which the game is played, be they traditional or game-specific.</Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
+
+
+
+
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" || this.props.mood === "depressed"
                         || this.props.mood === "anxious") ?
