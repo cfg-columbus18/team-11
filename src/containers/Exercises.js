@@ -13,6 +13,7 @@ export default class Exercises extends Component {
 
         this.toggleShowAll = this.toggleShowAll.bind(this);
         this.onFinish = this.onFinish.bind(this);
+        this.handleFeedback = this.handleFeedback.bind(this);
     }
 
     toggleShowAll() {
@@ -25,14 +26,13 @@ export default class Exercises extends Component {
     }
 
     handleFeedback() {
-        alert("TEST");
         this.props.history.push("/");
     }
 
     render() {
         return (
             <div className="Exercises">
-                <div class="row">
+                <div className="row">
                 {
                     (this.state.showAll) || (!this.state.hideAll && this.props.mood === "angry" || this.props.mood === "depressed"
                         || this.props.mood === "anxious") ?
@@ -129,6 +129,91 @@ export default class Exercises extends Component {
                         </Panel>
                         : null
                 }
+                    {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "alright") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">Walk</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Go outside and move</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body>Walking is one of the main gaits of locomotion among legged animals. </Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
+                    {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "safe") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">Socialize</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Call your best friend</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body>Communication is the act of conveying meanings from one entity or group to another through the use of mutually understood signs and semiotic rules.  </Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
+                    {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "unsafe") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">Get Help</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Dial hotline # 440-260-8595</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body>Other resousrces: Dial 911.</Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
+                    {
+                        (this.state.showAll) || (!this.state.hideAll && this.props.mood === "safe") ?
+                            <Panel className="col-lg-4">
+                                <Panel.Heading id={"panelhead"}>
+                                    <Panel.Title componentClass="h3">Give a Compliment</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>Talk about their clothes or hair</Panel.Body>
+                                <Panel.Toggle className="toggle" componentClass="a">Show Description</Panel.Toggle>
+                                {/*<Image src="https://cdn.psychologytoday.com/sites/default/files/blogs/38/2008/12/2598-75772.jpg" responsive/>*/}
+                                <Panel.Collapse>
+                                    <Modal.Dialog>
+                                        <Modal.Body>
+                                            a polite expression of praise or admiration.</Modal.Body>
+                                        <Modal.Footer>
+                                            <Panel.Toggle className="toggle" componentClass="a">Close</Panel.Toggle>
+                                            <Button bsStyle="primary" onClick={this.onFinish}>I'm Done!</Button>
+                                        </Modal.Footer>
+                                    </Modal.Dialog>
+                                </Panel.Collapse>
+                            </Panel>
+                            : null
+                    }
 
             </div>
 
@@ -141,8 +226,8 @@ export default class Exercises extends Component {
                     </Modal.Body>
                     <Modal.Footer>
                         <Button className="col-md-3" bsStyle="danger" onClick={this.handleFeedback}>Bad</Button>
-                        <Button className="col-md-3">Neutral</Button>
-                        <Button className="col-md-3" bsStyle="primary">Good</Button>
+                        <Button className="col-md-3" onClick={this.handleFeedback}>Neutral</Button>
+                        <Button className="col-md-3" bsStyle="primary" onClick={this.handleFeedback}>Good</Button>
                     </Modal.Footer>
                 </Modal>
                 <Button className="col-md-3" bsStyle="info" onClick={this.toggleShowAll}>Show All</Button>
