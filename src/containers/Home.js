@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { LinkContainer } from "react-router-bootstrap";
+import { Alert } from "react-bootstrap"
 import "./Home.css";
 
 export default class Home extends Component {
@@ -11,9 +12,12 @@ export default class Home extends Component {
         return (
             <div className="Home">
                 <div className="lander">
+
                     <h1>Code4Good</h1>
                     {/*<h3>{this.props.size}</h3>*/}
                     {/*<p>Our project</p>*/}
+
+
                     {
                         (this.props.size === 0) ?
                             <div className={"plant"}><img src="https://image.ibb.co/jidci0/Screen-Shot-2018-10-20-at-9-56-05-AM.png"/></div>
@@ -22,7 +26,7 @@ export default class Home extends Component {
 
                     {
                         (this.props.size === 1) ?
-                            <div className={"plant"}><img src="https://image.ibb.co/hOaJqf/Screen-Shot-2018-10-20-at-9-56-27-AM.png"/></div>
+                            <div className={"plant"}><img src="https://image.ibb.co/foOXGL/Screen-Shot-2018-10-20-at-10-14-32-AM.png"/></div>
                             : null
                     }
 

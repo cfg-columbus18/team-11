@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { Alert, Nav, Navbar, NavItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
@@ -79,6 +79,13 @@ class App extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
+                {
+                    (this.state.size !== 0) ?
+                        <Alert bsStyle="success">
+                            <strong>CONGRATS! Your Plant Grew</strong>
+                        </Alert>
+                        : null
+                }
                 <Routes childProps={childProps} />
             </div>
         );
