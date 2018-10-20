@@ -7,7 +7,8 @@ export default class Exercises extends Component {
         super(props);
         this.state = {
             showAll: false,
-            hideAll: false
+            hideAll: false,
+            show: false
         };
 
         this.toggleShowAll = this.toggleShowAll.bind(this);
@@ -20,6 +21,11 @@ export default class Exercises extends Component {
 
     onFinish() {
         this.props.setSize(this.props.size + 1);
+        this.setState({show: true});
+    }
+
+    handleFeedback() {
+        alert("TEST");
         this.props.history.push("/");
     }
 
@@ -48,6 +54,19 @@ export default class Exercises extends Component {
                         : null
                 }
 
+                <Modal show={this.state.show} className={"feedback"}>
+                    <Modal.Header>
+                        <Modal.Title>How Was Your Exercise?</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>Please rate your experience</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button className="col-md-3" bsStyle="danger" onClick={this.handleFeedback}>Bad</Button>
+                        <Button className="col-md-3">Neutral</Button>
+                        <Button className="col-md-3" bsStyle="primary">Good</Button>
+                    </Modal.Footer>
+                </Modal>
                 <Button bsStyle="info" onClick={this.toggleShowAll}>Show All</Button>
             </div>
         );

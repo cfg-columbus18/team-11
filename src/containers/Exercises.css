@@ -6,3 +6,7 @@
 .toggle {
     padding-right: 10px;
 }
+
+.feedback {
+    display: flex;
+}
