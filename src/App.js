@@ -10,12 +10,17 @@ class App extends Component {
         super(props);
 
         this.state = {
-            isAuthenticated: false
+            isAuthenticated: false,
+            mood: " "
         };
     }
 
     userHasAuthenticated = authenticated => {
         this.setState({ isAuthenticated: authenticated });
+    };
+
+    setMood = mood => {
+        this.setState({mood: mood});
     };
 
     handleLogout = event => {
@@ -28,7 +33,9 @@ class App extends Component {
     render() {
         const childProps = {
             isAuthenticated: this.state.isAuthenticated,
-            userHasAuthenticated: this.userHasAuthenticated
+            userHasAuthenticated: this.userHasAuthenticated,
+            setMood: this.setMood,
+            mood: this.state.mood
         };
 
         return (
